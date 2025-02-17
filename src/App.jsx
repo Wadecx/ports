@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import allPorts from "./data/ports.json"; // Tous les ports
 import osiPorts from "./data/osiport.json"; // Ports OSI
-import "./app.css"; // Styles CSS
+import "./App.css"; // Styles CSS
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("all"); // "all" ou "osi"
