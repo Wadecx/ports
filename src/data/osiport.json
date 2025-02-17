@@ -1,50 +1,181 @@
 {
-    "Couche_7_Application": [
-      { "protocole": "HTTP", "port": 80, "description": "Navigation Web non sécurisée" },
-      { "protocole": "HTTPS", "port": 443, "description": "Navigation Web sécurisée" },
-      { "protocole": "FTP", "ports": [20, 21], "description": "Transfert de fichiers" },
-      { "protocole": "SMTP", "port": 25, "description": "Envoi d’e-mails" },
-      { "protocole": "SMTPS", "port": 465, "description": "SMTP sécurisé" },
-      { "protocole": "POP3", "port": 110, "description": "Récupération d’e-mails" },
-      { "protocole": "IMAP", "port": 143, "description": "Accès aux e-mails sur un serveur" },
-      { "protocole": "IMAPS", "port": 993, "description": "IMAP sécurisé" },
-      { "protocole": "POP3S", "port": 995, "description": "POP3 sécurisé" },
-      { "protocole": "DNS", "port": 53, "description": "Résolution des noms de domaine" },
-      { "protocole": "DHCP", "ports": [67, 68], "description": "Attribution d’adresses IP" },
-      { "protocole": "SNMP", "ports": [161, 162], "description": "Surveillance et gestion réseau" },
-      { "protocole": "LDAP", "port": 389, "description": "Gestion d’annuaires" },
-      { "protocole": "LDAPS", "port": 636, "description": "LDAP sécurisé" },
-      { "protocole": "Telnet", "port": 23, "description": "Connexion à distance non sécurisée" },
-      { "protocole": "SSH", "port": 22, "description": "Connexion sécurisée à distance" },
-      { "protocole": "RDP", "port": 3389, "description": "Bureau à distance Windows" },
-      { "protocole": "IRC", "port": 194, "description": "Chat IRC" },
-      { "protocole": "NTP", "port": 123, "description": "Synchronisation de l’heure" },
-      { "protocole": "TFTP", "port": 69, "description": "Transfert de fichiers simple" }
-    ],
-    "Couche_6_Presentation": [
-      { "protocole": "TLS/SSL", "ports": [443, 465, 993, 995], "description": "Sécurisation des communications" }
-    ],
-    "Couche_5_Session": [
-      { "protocole": "NetBIOS", "ports": [137, 138, 139], "description": "Partage de fichiers Windows" },
-      { "protocole": "RPC", "port": 135, "description": "Communication inter-processus" },
-      { "protocole": "PPTP", "port": 1723, "description": "Connexion VPN" }
-    ],
-    "Couche_4_Transport": [
-      { "protocole": "TCP", "port": "-", "description": "Transport fiable avec contrôle de flux" },
-      { "protocole": "UDP", "port": "-", "description": "Transport rapide sans garantie d’intégrité" },
-      { "protocole": "BGP", "port": 179, "description": "Routage inter-domaines" }
-    ],
-    "Couche_3_Reseau": [
-      { "protocole": "ICMP", "port": "N/A", "description": "Ping, diagnostics réseau (pas de port, utilise des types de messages)" },
-      { "protocole": "IGMP", "port": "N/A", "description": "Gestion des groupes multicast" },
-      { "protocole": "OSPF", "port": 89, "description": "Protocole de routage interne" }
-    ],
-    "Couche_2_Liaison_de_donnees": [
-      { "protocole": "ARP", "port": "N/A", "description": "Résolution d’adresses MAC à partir d’IP" },
-      { "protocole": "RARP", "port": "N/A", "description": "Résolution d’IP à partir d’adresses MAC" }
-    ],
-    "Couche_1_Physique": [
-      { "protocole": "Aucun", "port": "N/A", "description": "Transmission brute des données (aucun port spécifique)" }
-    ]
-  }
-  
+  "Couche_7_Application": [
+    { 
+      "protocole": "HTTP", 
+      "port": 80, 
+      "description": "Hypertext Transfer Protocol - Protocole permettant la navigation web non sécurisée, utilisé pour transférer des pages web et des fichiers multimédias."
+    },
+    { 
+      "protocole": "HTTPS", 
+      "port": 443, 
+      "description": "Hypertext Transfer Protocol Secure - Version sécurisée du HTTP utilisant TLS/SSL pour le chiffrement des données."
+    },
+    { 
+      "protocole": "FTP", 
+      "ports": [20, 21], 
+      "description": "File Transfer Protocol - Protocole utilisé pour transférer des fichiers entre un client et un serveur. Le port 21 sert au contrôle, et le port 20 à la transmission des fichiers."
+    },
+    { 
+      "protocole": "SMTP", 
+      "port": 25, 
+      "description": "Simple Mail Transfer Protocol - Protocole utilisé pour l’envoi d’e-mails par les serveurs de messagerie."
+    },
+    { 
+      "protocole": "SMTPS", 
+      "port": 465, 
+      "description": "Simple Mail Transfer Protocol Secure - Version sécurisée de SMTP utilisant SSL/TLS pour le chiffrement."
+    },
+    { 
+      "protocole": "POP3", 
+      "port": 110, 
+      "description": "Post Office Protocol v3 - Protocole permettant aux clients de messagerie de récupérer les e-mails stockés sur un serveur."
+    },
+    { 
+      "protocole": "IMAP", 
+      "port": 143, 
+      "description": "Internet Message Access Protocol - Protocole permettant un accès aux e-mails stockés sur un serveur tout en les laissant disponibles à plusieurs appareils."
+    },
+    { 
+      "protocole": "IMAPS", 
+      "port": 993, 
+      "description": "Internet Message Access Protocol Secure - Version sécurisée d’IMAP utilisant TLS/SSL."
+    },
+    { 
+      "protocole": "POP3S", 
+      "port": 995, 
+      "description": "Post Office Protocol v3 Secure - Version sécurisée de POP3 utilisant TLS/SSL."
+    },
+    { 
+      "protocole": "DNS", 
+      "port": 53, 
+      "description": "Domain Name System - Protocole permettant la résolution de noms de domaine en adresses IP."
+    },
+    { 
+      "protocole": "DHCP", 
+      "ports": [67, 68], 
+      "description": "Dynamic Host Configuration Protocol - Permet l’attribution automatique des adresses IP aux équipements d’un réseau."
+    },
+    { 
+      "protocole": "SNMP", 
+      "ports": [161, 162], 
+      "description": "Simple Network Management Protocol - Utilisé pour la surveillance et la gestion des équipements réseau."
+    },
+    { 
+      "protocole": "LDAP", 
+      "port": 389, 
+      "description": "Lightweight Directory Access Protocol - Protocole permettant l’accès et la gestion des annuaires réseau."
+    },
+    { 
+      "protocole": "LDAPS", 
+      "port": 636, 
+      "description": "Lightweight Directory Access Protocol Secure - Version sécurisée de LDAP utilisant TLS/SSL."
+    },
+    { 
+      "protocole": "Telnet", 
+      "port": 23, 
+      "description": "Protocole permettant un accès distant non sécurisé à des équipements réseau via une ligne de commande."
+    },
+    { 
+      "protocole": "SSH", 
+      "port": 22, 
+      "description": "Secure Shell - Protocole sécurisé permettant une connexion distante en ligne de commande via un chiffrement des données."
+    },
+    { 
+      "protocole": "RDP", 
+      "port": 3389, 
+      "description": "Remote Desktop Protocol - Protocole utilisé pour contrôler à distance des machines Windows."
+    },
+    { 
+      "protocole": "IRC", 
+      "port": 194, 
+      "description": "Internet Relay Chat - Protocole utilisé pour le chat en temps réel via des serveurs IRC."
+    },
+    { 
+      "protocole": "NTP", 
+      "port": 123, 
+      "description": "Network Time Protocol - Permet la synchronisation de l’heure entre les équipements réseau."
+    },
+    { 
+      "protocole": "TFTP", 
+      "port": 69, 
+      "description": "Trivial File Transfer Protocol - Version simplifiée de FTP sans authentification."
+    }
+  ],
+  "Couche_6_Presentation": [
+    { 
+      "protocole": "TLS/SSL", 
+      "ports": [443, 465, 993, 995], 
+      "description": "Transport Layer Security / Secure Sockets Layer - Protocoles de sécurisation des communications via le chiffrement."
+    }
+  ],
+  "Couche_5_Session": [
+    { 
+      "protocole": "NetBIOS", 
+      "ports": [137, 138, 139], 
+      "description": "Network Basic Input/Output System - Permet le partage de fichiers et d’imprimantes sur un réseau local Windows."
+    },
+    { 
+      "protocole": "RPC", 
+      "port": 135, 
+      "description": "Remote Procedure Call - Permet l’exécution de processus sur des machines distantes."
+    },
+    { 
+      "protocole": "PPTP", 
+      "port": 1723, 
+      "description": "Point-to-Point Tunneling Protocol - Protocole VPN obsolète permettant d’établir des connexions sécurisées."
+    }
+  ],
+  "Couche_4_Transport": [
+    { 
+      "protocole": "TCP", 
+      "port": "-", 
+      "description": "Transmission Control Protocol - Assure un transport fiable des données avec contrôle d’erreur et réémission des paquets perdus."
+    },
+    { 
+      "protocole": "UDP", 
+      "port": "-", 
+      "description": "User Datagram Protocol - Protocole rapide sans garantie de livraison des paquets, utilisé pour le streaming et la voix sur IP."
+    },
+    { 
+      "protocole": "BGP", 
+      "port": 179, 
+      "description": "Border Gateway Protocol - Permet l’échange de routes entre systèmes autonomes sur Internet."
+    }
+  ],
+  "Couche_3_Reseau": [
+    { 
+      "protocole": "ICMP", 
+      "port": "N/A", 
+      "description": "Internet Control Message Protocol - Utilisé pour le diagnostic réseau (ex: ping)."
+    },
+    { 
+      "protocole": "IGMP", 
+      "port": "N/A", 
+      "description": "Internet Group Management Protocol - Permet la gestion des groupes multicast."
+    },
+    { 
+      "protocole": "OSPF", 
+      "port": 89, 
+      "description": "Open Shortest Path First - Protocole de routage dynamique interne basé sur l’algorithme de Dijkstra."
+    }
+  ],
+  "Couche_2_Liaison_de_donnees": [
+    { 
+      "protocole": "ARP", 
+      "port": "N/A", 
+      "description": "Address Resolution Protocol - Permet d’associer une adresse IP à une adresse MAC sur un réseau local."
+    },
+    { 
+      "protocole": "RARP", 
+      "port": "N/A", 
+      "description": "Reverse Address Resolution Protocol - Effectue l’opération inverse d’ARP, en retrouvant une IP à partir d’une adresse MAC."
+    }
+  ],
+  "Couche_1_Physique": [
+    { 
+      "protocole": "Aucun", 
+      "port": "N/A", 
+      "description": "Couche responsable de la transmission physique des données sur les médias de communication (câbles, ondes radio, fibres optiques)."
+    }
+  ]
+}
