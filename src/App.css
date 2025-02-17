@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: black;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar button {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar button.active {
+  background: #007BFF;
+  color: white;
+}
+
+.navbar button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* Tableaux */
+.table-container {
+  overflow-x: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.osi-layer {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #007BFF;
+}
+
+.ports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.ports-table th,
+.ports-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.ports-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.even-row {
+  background-color: #f9f9f9;
+}
+
+.odd-row {
+  background-color: #ffffff;
+}
+
+.ports-table tr:hover {
+  background-color: #ddd;
+}
